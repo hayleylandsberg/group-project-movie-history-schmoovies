@@ -8,7 +8,7 @@ let searchCardTemplate = require ('../templates/searchCards.hbs');
 let savedCardsTemplate = require('../templates/savedCards.hbs');
 
 let fbFactory = require('./firebase-factory');
-let fbURL = "https://schmoovies-e903e.firebaseio.com";
+let fbURL = "https://test-9f12e.firebaseio.com";
 
 module.exports.searchDataToMovieCards = (data) => {
 	let cards = searchCardTemplate({movies: data.results});
@@ -32,11 +32,11 @@ module.exports.deleteFromScreen = (movieObjId) => {
 	return new Promise( (resolve, reject) => {
 		$.ajax({
 	      url: `${fbURL}/movies/${movieObjId}.json`,
-	      type: "GET"
+	      type: "DELETE"
 	    }).done( (movieObj) => {
-	    	let movieId = movieObj.id;
-	      $(`#searchedMovie${movieId}`).remove();
-	      resolve(movieObj.id);
+	    	// let movieId = movieObj.id;
+	      // $(`#searchedMovie${movieId}`).remove();
+	      resolve(movieObj);
 	    }).fail( (err) => {
 	    	console.log("error", err);
 	    });

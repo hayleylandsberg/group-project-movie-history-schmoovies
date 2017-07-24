@@ -1,7 +1,7 @@
 'use strict';
 
 let $ = require('jquery');
-const fbURL = 'https://schmoovies-e903e.firebaseapp.com';
+const fbURL = "https://test-9f12e.firebaseio.com";
 let firebase = require('./firebaseConfig');
 let getApiKey = require('./api-getter')();
 // const moviedbSearchURL = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${user_input}`;
