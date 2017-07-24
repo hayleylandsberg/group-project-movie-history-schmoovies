@@ -146,10 +146,9 @@ $(document).on("click", ".deleteCardBtn", function(movie) {
   movieViewController.deleteFromScreen(movieId)
     .then((movie) => {
       console.log("movieDeleted", movie);
-      module.exports.loadSongsToDom();
     })
     .catch((err) => {
-      console.log("Song could not be deleted", err.statusText);
+      console.log("Movie could not be deleted", err.statusText);
     });
   event.target.parentNode.parentNode.remove();
 });
