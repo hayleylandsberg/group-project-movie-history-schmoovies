@@ -1,13 +1,13 @@
-	{{#each movies}}
-		<div class="savedCard col-sm-4 movieCard" id="movie{{id}}" data-fbid="{{fbId}}" data-rating="{{rating}}">
-			<div class="cardHeader">
-				<h2>{{title}}</h2>
-				<button class="deleteCardBtn delete{{id}}">X</button>
-			</div>
-			<div class="movieInfo">
-				{{> movieInfoPartial }}
-				{{!-- movie info partial goes here --}}
-			</div>
-			<div class="rating"><span data-rate="1" id="star1">☆</span><span id="star2" data-rate="2">☆</span><span id="star3" data-rate="3">☆</span><span id="star4" data-rate="4">☆</span><span id="star5" data-rate="5">☆</span><span id="star6" data-rate="6">☆</span><span id="star7" data-rate="7">☆</span><span id="star8" data-rate="8">☆</span><span id="star9" data-rate="9">☆</span><span id="star10" data-rate="10">☆</span></div>
-		</div>
-	{{/each}}
+{{#each movies}}
+        <div class="savedCard col-sm-4 movieCard" id="movie{{id}}" data-fbid="{{fbId}}" data-rating="{{rating}}">
+            <div class="cardHeader">
+                <h2>{{title}}</h2>
+                <button class="deleteCardBtn" data-delete-id="{{fbId}}">X</button>
+            </div>
+            <div class="movieInfo">
+                {{> movieInfoPartial }}
+                {{!-- movie info partial goes here --}}
+            </div>
+            <div class="rating"><span data-rate="10" id="star10">☆</span><span id="star9" data-rate="9">☆</span><span id="star8" data-rate="8">☆</span><span id="star7" data-rate="7">☆</span><span id="star6" data-rate="6">☆</span><span id="star5" data-rate="5">☆</span><span id="star4" data-rate="4">☆</span><span id="star3" data-rate="3">☆</span><span id="star2" data-rate="2">☆</span><span id="star1" data-rate="1">☆</span></div>
+        </div>
+    {{/each}}

@@ -3,7 +3,8 @@
 let $ = require('jquery');
 let firebase = require('./firebaseConfig');
 
-let fbURL = "https://schmoovies-e903e.firebaseio.com";
+let fbURL = "https://test-9f12e.firebaseio.com";
+
 
 module.exports.saveInFirebase = (movieObj) => {
 	return new Promise( (resolve, reject) => {
